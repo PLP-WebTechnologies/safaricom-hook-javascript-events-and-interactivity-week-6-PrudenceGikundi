@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 🟢 Background Toggle Button -->
+    <button onclick="toggleBackgroundColor()">Toggle Background Color</button>
+
+    <!-- 🟢 Text Size Slider -->
+    <label for="text-size-slider">Adjust Text Size:</label>
+    <input type="range" id="text-size-slider" min="12" max="40" value="16" oninput="adjustTextSize()">
+    <p id="dynamic-text">This text size changes dynamically!</p>
+
+    <!-- 🟢 Modal -->
+    <button onclick="openModal()">Open Modal</button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>This is a modal pop-up!</p>
+        </div>
+    </div>
+
+    <!-- 🟢 Form with Validation -->
+    <form id="registration-form" onsubmit="validateForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <p class="error" id="name-error"></p>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <p class="error" id="email-error"></p>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <p class="error" id="password-error"></p>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- 🟢 Dropdown Menu -->
+    <label for="dropdown">Choose an option:</label>
+    <select id="dropdown" onchange="showDropdownMessage()">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="dropdown-message"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
